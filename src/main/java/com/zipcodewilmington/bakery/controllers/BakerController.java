@@ -15,12 +15,12 @@ public class BakerController {
         this.service = service;
     }
 
-    @RequestMapping("/bakers") //GET ALL BAKERS
+    @GetMapping("/bakers") //GET ALL BAKERS
     public ResponseEntity<Iterable<Baker>> index() {
         return new ResponseEntity<>(service.index(), HttpStatus.OK);
     }
 
-    @RequestMapping("/baker/{id}") //GET SPECIFIC BAKER BY ID
+    @GetMapping("/baker/{id}") //GET SPECIFIC BAKER BY ID
     public ResponseEntity<Baker> show(Long id) {
         return new ResponseEntity<>(service.show(id), HttpStatus.OK);
     }
