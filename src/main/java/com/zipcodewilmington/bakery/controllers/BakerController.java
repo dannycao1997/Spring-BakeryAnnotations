@@ -25,7 +25,7 @@ public class BakerController {
         return new ResponseEntity<>(service.show(id), HttpStatus.OK);
     }
 
-    @PostMapping("/baker") //CREATE NEW BAKER
+    @PostMapping("/bakers") //CREATE NEW BAKER
     public ResponseEntity<Baker> create(Baker baker) {
         return new ResponseEntity<>(service.create(baker), HttpStatus.CREATED);
     }
